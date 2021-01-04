@@ -31,6 +31,17 @@ int main(){
 			case WKUP_PRES: Car_Stop(); break;
 			default: delay_ms(20); LED0=!LED0;
 		}
+//		delay_ms(300);
+//		LED3 = 0;
+//		LED4 = 0;
+//		LED5 = 0;
+//		LED6 = 0;
+//		
+//		delay_ms(300);
+//		LED3 = 1;
+//		LED4 = 1;
+//		LED5 = 1;
+//		LED6 = 1;
 	}
 }
 

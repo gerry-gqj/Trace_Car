@@ -14,7 +14,7 @@
 #define SENSOR1_IN PAin(4)
 #define SENSOR2_IN PAin(5)
 #define SENSOR3_IN PAin(6)
-#define SENSOR4_IN PAin(8)
+#define SENSOR4_IN PAin(7)
 
 
 void INFRARED_SENSOR_Init(void);
