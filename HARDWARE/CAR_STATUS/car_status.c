@@ -1,0 +1,58 @@
+#include "car_status.h"
+#include "motor_status.h"
+
+void Car_Go(void){
+
+	MOTOR_FL_STATUS(GO);
+	MOTOR_FR_STATUS(GO);
+	MOTOR_RL_STATUS(GO);
+	MOTOR_RR_STATUS(GO);
+}
+void Car_Back(void){
+
+	MOTOR_FL_STATUS(BACK);
+	MOTOR_FR_STATUS(BACK);
+	MOTOR_RL_STATUS(BACK);
+	MOTOR_RR_STATUS(BACK);
+}		
+
+void Car_Right_Round(void){
+	
+	MOTOR_FL_STATUS(BACK);
+	MOTOR_FR_STATUS(GO);
+	MOTOR_RL_STATUS(BACK);
+	MOTOR_RR_STATUS(GO);
+
+}
+void Car_Left_Round(void){
+	
+	MOTOR_FL_STATUS(GO);
+	MOTOR_FR_STATUS(BACK);
+	MOTOR_RL_STATUS(GO);
+	MOTOR_RR_STATUS(BACK);
+
+}
+
+void Car_Turn_Right(void){
+
+	MOTOR_FL_STATUS(STOP);
+	MOTOR_FR_STATUS(GO);
+	MOTOR_RL_STATUS(STOP);
+	MOTOR_RR_STATUS(GO);
+	
+}
+void Car_Turn_Left(void){
+
+	MOTOR_FL_STATUS(GO);
+	MOTOR_FR_STATUS(STOP);
+	MOTOR_RL_STATUS(GO);
+	MOTOR_RR_STATUS(STOP);
+}
+void Car_Stop(void){
+	
+	MOTOR_FL_STATUS(STOP);
+	MOTOR_FR_STATUS(STOP);
+	MOTOR_RL_STATUS(STOP);
+	MOTOR_RR_STATUS(STOP);
+
+}
