@@ -17,31 +17,33 @@ int main(){
 	KEY_Init();
 	MOTOR_STATUS_Config();
 	INFRARED_SENSOR_Init();
-	MOTOR_PWM_Config(199,0);
+	MOTOR_PWM_Config(99,35);
 
-	MOTOR_FL_PWM(50);		
-	MOTOR_FR_PWM(50);
-	MOTOR_RL_PWM(50);
-	MOTOR_RR_PWM(50);
+//	MOTOR_FL_PWM(50);		
+//	MOTOR_FR_PWM(50);
+//	MOTOR_RL_PWM(50);
+//	MOTOR_RR_PWM(50);
 	
 	while(1){
+		
 		switch (KEY_Scan(0)){
-			case KEY0_PRES: TRACE_CTRL(); break;
-			case KEY1_PRES: Car_Go(); break;
-			case WKUP_PRES: Car_Stop(); break;
-			default: delay_ms(20); LED0=!LED0;
+			case KEY0_PRES: 
+				TRACE_CTRL(); 
+				break;
+			case KEY1_PRES: 
+				Car_Go(); 
+				MOTOR_FL_PWM(100);		
+				MOTOR_FR_PWM(70);
+				MOTOR_RL_PWM(100);
+				MOTOR_RR_PWM(70);
+				break;
+			case WKUP_PRES:
+				Car_Stop(); 
+				break;
+			default: 
+				delay_ms(20); 
+				LED0=!LED0;
 		}
-//		delay_ms(300);
-//		LED3 = 0;
-//		LED4 = 0;
-//		LED5 = 0;
-//		LED6 = 0;
-//		
-//		delay_ms(300);
-//		LED3 = 1;
-//		LED4 = 1;
-//		LED5 = 1;
-//		LED6 = 1;
 	}
 }
 

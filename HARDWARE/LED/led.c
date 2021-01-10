@@ -5,6 +5,7 @@
 //ALIENTEK miniSTM32开发板
 //LED驱动代码	   
 //正点原子@ALIENTEK
+
 //技术论坛:www.openedv.com
 //修改日期:2012/9/2
 //版本：V1.0
