@@ -27,19 +27,25 @@ int main(){
 	while(1){
 		
 		switch (KEY_Scan(0)){
+			
 			case KEY0_PRES: 
 				TRACE_CTRL(); 
 				break;
+			
 			case KEY1_PRES: 
+				
+				MOTOR_FL_PWM(90);		
+				MOTOR_FR_PWM(90);
+				MOTOR_RL_PWM(90);
+				MOTOR_RR_PWM(90);
+		
 				Car_Go(); 
-				MOTOR_FL_PWM(100);		
-				MOTOR_FR_PWM(70);
-				MOTOR_RL_PWM(100);
-				MOTOR_RR_PWM(70);
 				break;
+			
 			case WKUP_PRES:
 				Car_Stop(); 
 				break;
+			
 			default: 
 				delay_ms(20); 
 				LED0=!LED0;

@@ -12,11 +12,11 @@ Section Cross References
     main.o(i.main) refers to motor_pwm.o(i.MOTOR_PWM_Config) for MOTOR_PWM_Config
     main.o(i.main) refers to key.o(i.KEY_Scan) for KEY_Scan
     main.o(i.main) refers to trace_ctrl.o(i.TRACE_CTRL) for TRACE_CTRL
-    main.o(i.main) refers to car_status.o(i.Car_Go) for Car_Go
     main.o(i.main) refers to motor_pwm.o(i.MOTOR_FL_PWM) for MOTOR_FL_PWM
     main.o(i.main) refers to motor_pwm.o(i.MOTOR_FR_PWM) for MOTOR_FR_PWM
     main.o(i.main) refers to motor_pwm.o(i.MOTOR_RL_PWM) for MOTOR_RL_PWM
     main.o(i.main) refers to motor_pwm.o(i.MOTOR_RR_PWM) for MOTOR_RR_PWM
+    main.o(i.main) refers to car_status.o(i.Car_Go) for Car_Go
     main.o(i.main) refers to car_status.o(i.Car_Stop) for Car_Stop
     main.o(i.main) refers to delay.o(i.delay_ms) for delay_ms
     system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
@@ -151,16 +151,18 @@ Section Cross References
     car_status.o(i.Car_Turn_Right) refers to motor_status.o(i.MOTOR_RR_STATUS) for MOTOR_RR_STATUS
     infrared_status.o(i.INFRARED_SENSOR_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
     infrared_status.o(i.INFRARED_SENSOR_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    trace_ctrl.o(i.TRACE_CTRL) refers to motor_pwm.o(i.MOTOR_PWM_Config) for MOTOR_PWM_Config
     trace_ctrl.o(i.TRACE_CTRL) refers to delay.o(i.delay_init) for delay_init
+    trace_ctrl.o(i.TRACE_CTRL) refers to key.o(i.KEY_Init) for KEY_Init
     trace_ctrl.o(i.TRACE_CTRL) refers to motor_pwm.o(i.MOTOR_FL_PWM) for MOTOR_FL_PWM
     trace_ctrl.o(i.TRACE_CTRL) refers to motor_pwm.o(i.MOTOR_FR_PWM) for MOTOR_FR_PWM
     trace_ctrl.o(i.TRACE_CTRL) refers to motor_pwm.o(i.MOTOR_RL_PWM) for MOTOR_RL_PWM
     trace_ctrl.o(i.TRACE_CTRL) refers to motor_pwm.o(i.MOTOR_RR_PWM) for MOTOR_RR_PWM
     trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Go) for Car_Go
-    trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Turn_Left) for Car_Turn_Left
-    trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Left_Round) for Car_Left_Round
-    trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Turn_Right) for Car_Turn_Right
     trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Right_Round) for Car_Right_Round
+    trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Turn_Right) for Car_Turn_Right
+    trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Left_Round) for Car_Left_Round
+    trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Turn_Left) for Car_Turn_Left
     trace_ctrl.o(i.TRACE_CTRL) refers to car_status.o(i.Car_Stop) for Car_Stop
     trace_ctrl.o(i.TRACE_CTRL) refers to delay.o(i.delay_ms) for delay_ms
     use_no_semi_2.o(.text) refers (Special) to use_no_semi.o(.text) for __use_no_semihosting_swi
@@ -619,14 +621,14 @@ Image Symbol Table
     i.TIM_SetCompare4                        0x08000e4a   Section        0  stm32f10x_tim.o(i.TIM_SetCompare4)
     i.TIM_TimeBaseInit                       0x08000e50   Section        0  stm32f10x_tim.o(i.TIM_TimeBaseInit)
     i.TRACE_CTRL                             0x08000ef4   Section        0  trace_ctrl.o(i.TRACE_CTRL)
-    i.USART1_IRQHandler                      0x080011a8   Section        0  usart.o(i.USART1_IRQHandler)
-    i.USART_GetITStatus                      0x08001230   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
-    i.USART_ReceiveData                      0x08001284   Section        0  stm32f10x_usart.o(i.USART_ReceiveData)
-    i.UsageFault_Handler                     0x0800128e   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
-    i._sys_exit                              0x08001292   Section        0  usart.o(i._sys_exit)
-    i.delay_init                             0x08001298   Section        0  delay.o(i.delay_init)
-    i.delay_ms                               0x080012dc   Section        0  delay.o(i.delay_ms)
-    i.main                                   0x08001328   Section        0  main.o(i.main)
+    i.USART1_IRQHandler                      0x080012b0   Section        0  usart.o(i.USART1_IRQHandler)
+    i.USART_GetITStatus                      0x08001338   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
+    i.USART_ReceiveData                      0x0800138c   Section        0  stm32f10x_usart.o(i.USART_ReceiveData)
+    i.UsageFault_Handler                     0x08001396   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
+    i._sys_exit                              0x0800139a   Section        0  usart.o(i._sys_exit)
+    i.delay_init                             0x080013a0   Section        0  delay.o(i.delay_init)
+    i.delay_ms                               0x080013e4   Section        0  delay.o(i.delay_ms)
+    i.main                                   0x08001430   Section        0  main.o(i.main)
     .data                                    0x20000000   Section       20  system_stm32f10x.o(.data)
     .data                                    0x20000014   Section        4  delay.o(.data)
     fac_us                                   0x20000014   Data           1  delay.o(.data)
@@ -851,17 +853,17 @@ Image Symbol Table
     TIM_SetCompare3                          0x08000e47   Thumb Code     4  stm32f10x_tim.o(i.TIM_SetCompare3)
     TIM_SetCompare4                          0x08000e4b   Thumb Code     6  stm32f10x_tim.o(i.TIM_SetCompare4)
     TIM_TimeBaseInit                         0x08000e51   Thumb Code   122  stm32f10x_tim.o(i.TIM_TimeBaseInit)
-    TRACE_CTRL                               0x08000ef5   Thumb Code   676  trace_ctrl.o(i.TRACE_CTRL)
-    USART1_IRQHandler                        0x080011a9   Thumb Code   122  usart.o(i.USART1_IRQHandler)
-    USART_GetITStatus                        0x08001231   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
-    USART_ReceiveData                        0x08001285   Thumb Code    10  stm32f10x_usart.o(i.USART_ReceiveData)
-    UsageFault_Handler                       0x0800128f   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
-    _sys_exit                                0x08001293   Thumb Code     4  usart.o(i._sys_exit)
-    delay_init                               0x08001299   Thumb Code    50  delay.o(i.delay_init)
-    delay_ms                                 0x080012dd   Thumb Code    72  delay.o(i.delay_ms)
-    main                                     0x08001329   Thumb Code   120  main.o(i.main)
-    Region$$Table$$Base                      0x080013a4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080013c4   Number         0  anon$$obj.o(Region$$Table)
+    TRACE_CTRL                               0x08000ef5   Thumb Code   940  trace_ctrl.o(i.TRACE_CTRL)
+    USART1_IRQHandler                        0x080012b1   Thumb Code   122  usart.o(i.USART1_IRQHandler)
+    USART_GetITStatus                        0x08001339   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
+    USART_ReceiveData                        0x0800138d   Thumb Code    10  stm32f10x_usart.o(i.USART_ReceiveData)
+    UsageFault_Handler                       0x08001397   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
+    _sys_exit                                0x0800139b   Thumb Code     4  usart.o(i._sys_exit)
+    delay_init                               0x080013a1   Thumb Code    50  delay.o(i.delay_init)
+    delay_ms                                 0x080013e5   Thumb Code    72  delay.o(i.delay_ms)
+    main                                     0x08001431   Thumb Code   120  main.o(i.main)
+    Region$$Table$$Base                      0x080014ac   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080014cc   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f10x.o(.data)
     AHBPrescTable                            0x20000004   Data          16  system_stm32f10x.o(.data)
     __stdout                                 0x20000018   Data           4  usart.o(.data)
@@ -878,9 +880,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000013e4, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000014ec, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000013c4, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000014cc, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1001,17 +1003,17 @@ Memory Map of the image
     0x08000e46   0x00000004   Code   RO          384    i.TIM_SetCompare3   stm32f10x_tim.o
     0x08000e4a   0x00000006   Code   RO          385    i.TIM_SetCompare4   stm32f10x_tim.o
     0x08000e50   0x000000a4   Code   RO          392    i.TIM_TimeBaseInit  stm32f10x_tim.o
-    0x08000ef4   0x000002b4   Code   RO         1605    i.TRACE_CTRL        trace_ctrl.o
-    0x080011a8   0x00000088   Code   RO         1401    i.USART1_IRQHandler  usart.o
-    0x08001230   0x00000054   Code   RO         1175    i.USART_GetITStatus  stm32f10x_usart.o
-    0x08001284   0x0000000a   Code   RO         1185    i.USART_ReceiveData  stm32f10x_usart.o
-    0x0800128e   0x00000004   Code   RO          136    i.UsageFault_Handler  stm32f10x_it.o
-    0x08001292   0x00000004   Code   RO         1402    i._sys_exit         usart.o
-    0x08001296   0x00000002   PAD
-    0x08001298   0x00000044   Code   RO         1347    i.delay_init        delay.o
-    0x080012dc   0x0000004c   Code   RO         1348    i.delay_ms          delay.o
-    0x08001328   0x0000007c   Code   RO            1    i.main              main.o
-    0x080013a4   0x00000020   Data   RO         1776    Region$$Table       anon$$obj.o
+    0x08000ef4   0x000003bc   Code   RO         1605    i.TRACE_CTRL        trace_ctrl.o
+    0x080012b0   0x00000088   Code   RO         1401    i.USART1_IRQHandler  usart.o
+    0x08001338   0x00000054   Code   RO         1175    i.USART_GetITStatus  stm32f10x_usart.o
+    0x0800138c   0x0000000a   Code   RO         1185    i.USART_ReceiveData  stm32f10x_usart.o
+    0x08001396   0x00000004   Code   RO          136    i.UsageFault_Handler  stm32f10x_it.o
+    0x0800139a   0x00000004   Code   RO         1402    i._sys_exit         usart.o
+    0x0800139e   0x00000002   PAD
+    0x080013a0   0x00000044   Code   RO         1347    i.delay_init        delay.o
+    0x080013e4   0x0000004c   Code   RO         1348    i.delay_ms          delay.o
+    0x08001430   0x0000007c   Code   RO            1    i.main              main.o
+    0x080014ac   0x00000020   Data   RO         1776    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000748, Max: 0x0000c000, ABSOLUTE)
@@ -1053,11 +1055,11 @@ Image component sizes
        948         92          0          0          0       9741   stm32f10x_tim.o
         94          0          0          0          0       2652   stm32f10x_usart.o
        328         28          0         20          0       1937   system_stm32f10x.o
-       692         16          0          0          0        905   trace_ctrl.o
+       956         16          0          0          0       1117   trace_ctrl.o
        140         14          0          6        200       2772   usart.o
 
     ----------------------------------------------------------------------
-      4456        334        336         32       1736     281738   Object Totals
+      4720        334        336         32       1736     281950   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         16          0          0          1          0          0   (incl. Padding)
 
@@ -1105,15 +1107,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      4724        346        336         32       1832     279146   Grand Totals
-      4724        346        336         32       1832     279146   ELF Image Totals
-      4724        346        336         32          0          0   ROM Totals
+      4988        346        336         32       1832     279358   Grand Totals
+      4988        346        336         32       1832     279358   ELF Image Totals
+      4988        346        336         32          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 5060 (   4.94kB)
+    Total RO  Size (Code + RO Data)                 5324 (   5.20kB)
     Total RW  Size (RW Data + ZI Data)              1864 (   1.82kB)
-    Total ROM Size (Code + RO Data + RW Data)       5092 (   4.97kB)
+    Total ROM Size (Code + RO Data + RW Data)       5356 (   5.23kB)
 
 ==============================================================================
 

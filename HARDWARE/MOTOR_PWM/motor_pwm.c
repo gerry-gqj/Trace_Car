@@ -89,75 +89,23 @@ void MOTOR_PWM_Config(u16 arr,u16 psc){
 //前左
 void MOTOR_FL_PWM(u16 motor_fl_pls){
 	
-//	TIM_OCInitTypeDef TIM_OCInitStructure;
-//	
-//	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High; //输出极性高
-//	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //PWM模式
-//	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable; //允许输出
-//	TIM_OCInitStructure.TIM_Pulse = motor_fl_pls; //占空比
-//	TIM_OC1Init(TIM8,&TIM_OCInitStructure);
-//	
-////	TIM_OC1PolarityConfig(TIM8,TIM_OCPreload_Enable);
-//	TIM_CtrlPWMOutputs(TIM8,ENABLE);
-//	TIM_ARRPreloadConfig(TIM8,ENABLE);
-//	TIM_Cmd(TIM8,ENABLE);
-	
-	
 	TIM_SetCompare1(TIM8,motor_fl_pls);
-
 }
 
 //前右
 void MOTOR_FR_PWM(u16 motor_fr_pls){
-	
-//	TIM_OCInitTypeDef TIM_OCInitStructure;
-//	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High; //输出极性高
-//	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //PWM模式
-//	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable; //允许输出
-//	TIM_OCInitStructure.TIM_Pulse = motor_fr_pls; //占空比
-//	TIM_OC2Init(TIM8,&TIM_OCInitStructure);
-//	
-////	TIM_OC2PolarityConfig(TIM8,TIM_OCPreload_Enable);
-//	TIM_CtrlPWMOutputs(TIM8,ENABLE);
-//	TIM_ARRPreloadConfig(TIM8,ENABLE);
-//	TIM_Cmd(TIM8,ENABLE);
-	
+
 	TIM_SetCompare2(TIM8,motor_fr_pls);
 }
 
 //后左
 void MOTOR_RL_PWM(u16 motor_rl_pls){
-
-//	TIM_OCInitTypeDef TIM_OCInitStructure;
-//	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High; //输出极性高
-//	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //PWM模式
-//	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable; //允许输出
-//	TIM_OCInitStructure.TIM_Pulse = motor_rl_pls; //占空比
-//	TIM_OC3Init(TIM8,&TIM_OCInitStructure);
-//	
-////	TIM_OC3PolarityConfig(TIM8,TIM_OCPreload_Enable);
-//	TIM_CtrlPWMOutputs(TIM8,ENABLE);
-//	TIM_ARRPreloadConfig(TIM8,ENABLE);
-//	TIM_Cmd(TIM8,ENABLE);
 	
 	TIM_SetCompare3(TIM8,motor_rl_pls);
 }
 
 //后右
 void MOTOR_RR_PWM(u16 motor_rr_pls){
-
-//	TIM_OCInitTypeDef TIM_OCInitStructure;
-//	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High; //输出极性高
-//	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //PWM模式
-//	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable; //允许输出
-//	TIM_OCInitStructure.TIM_Pulse = motor_rr_pls; //占空比
-//	TIM_OC4Init(TIM8,&TIM_OCInitStructure);
-//	
-////	TIM_OC4PolarityConfig(TIM8,TIM_OCPreload_Enable);
-//	TIM_CtrlPWMOutputs(TIM8,ENABLE);
-//	TIM_ARRPreloadConfig(TIM8,ENABLE);
-//	TIM_Cmd(TIM8,ENABLE);
 	
 	TIM_SetCompare4(TIM8,motor_rr_pls);
-	
 }
